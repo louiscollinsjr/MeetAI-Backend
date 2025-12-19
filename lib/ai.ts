@@ -24,5 +24,5 @@ export type AssistantType = keyof typeof SYSTEM_PROMPTS;
 
 export function getModel(modelId?: string) {
   // Vercel AI Gateway format: provider/model
-  return gateway(modelId || 'mistral/devstral-small-2505');
+  return gateway(modelId || 'openai/gpt-4o-mini');
 }

@@ -29,7 +29,7 @@ export async function POST(req: Request) {
 
     return Response.json({
       response: result.text,
-      model: model || 'mistral/devstral-small-2505',
+      model: model || 'openai/gpt-4o-mini',
     });
   } catch (error) {
     console.error('Chat API error:', error);
