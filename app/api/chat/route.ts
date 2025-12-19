@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     const result = await generateText({
       model: getModel(model),
       messages,
-      maxTokens: 500,
+      // maxTokens: 500,
       temperature: 0.7,
     });
 
