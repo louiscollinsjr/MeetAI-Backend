@@ -1,4 +1,5 @@
 import { generateText } from 'ai';
+import 'dotenv/config';
 import { getModel, SYSTEM_PROMPTS } from '@/lib/ai';
 import { ChatRequest } from '@/lib/types';
 
@@ -26,7 +27,7 @@ export async function POST(req: Request) {
 
     return Response.json({
       response: result.text,
-      model: model || 'gpt-4o-mini',
+      model: model || 'mistral/devstral-small-2505',
     });
   } catch (error) {
     console.error('Coaching API error:', error);

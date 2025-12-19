@@ -9,15 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/gateway": "^2.0.22",
     "@ai-sdk/openai": "^1.0.0",
-    "ai": "^4.0.0",
+    "ai": "^5.0.115",
+    "dotenv": "^17.2.3",
     "next": "^15.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "tsx": "^4.21.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.19.3",
     "@types/react": "^19.0.1",
     "typescript": "^5.7.2"
   }

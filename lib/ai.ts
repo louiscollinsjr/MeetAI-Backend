@@ -1,4 +1,5 @@
-import { openai } from '@ai-sdk/openai';
+import 'dotenv/config';
+import { gateway } from '@ai-sdk/gateway';
 
 export const SYSTEM_PROMPTS = {
   default: `You are MeetAI, a helpful voice-first AI assistant. Keep responses concise and conversational since they will be spoken aloud. Aim for 1-3 sentences unless the user asks for detailed information.`,
@@ -22,5 +23,6 @@ Focus on:
 export type AssistantType = keyof typeof SYSTEM_PROMPTS;
 
 export function getModel(modelId?: string) {
-  return openai(modelId || 'gpt-4o-mini');
+  // Vercel AI Gateway format: provider/model
+  return gateway(modelId || 'mistral/devstral-small-2505');
 }
